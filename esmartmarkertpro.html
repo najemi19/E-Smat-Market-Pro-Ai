@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Smart Market Pro - منصة الحلول الرقمية الذكية</title>
+    <meta name="description" content="منصة رقمية موحدة لتمكين الأفراد والتعاونيات عبر حلول ذكية، بسيطة، ومستدامة">
+    <meta name="keywords" content="E-Smart, Market Pro, حلول رقمية, تعاونيات, مشاريع ذكية, استدامة, تمكين محلي">
+    <meta name="author" content="E-Smart Market Pro">
+    <meta name="theme-color" content="#1a365d">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkUtU21hcnQgTWFya2V0IFBybyIsCiAgInNob3J0X25hbWUiOiAiRS1TbWFydCIsCiAgImRlc2NyaXB0aW9uIjogIkEgdW5pZmllZCBkaWdpdGFsIHBsYXRmb3JtIGVtcG93ZXJpbmcgaW5kaXZpZHVhbHMgYW5kIGNvb3BlcmF0aXZlcyIsCiAgInN0YXJ0X3VybCI6ICIuIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMWEzNjVkIiwKICAidGhlbWVfY29sb3IiOiAiIzJkN2QzMiIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0LXByaW1hcnkiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSEJ5WlhObGNuWmxRWE53WldOMFVtRjBhVzg5SW5oTmFXNVpUV2x1SUcxbFpYUWlJSFpwWlhkQ2IzZzlJakFnTUNBek5UQWdNelV3SWlCNVBTSXhNREF3SURJeE1EQWlJR2R5WVdScFpXNTBJRDBnTkRBeUxqQTVJREV3TURBaUlHWnBiR3c5SWlNeE1EQXdJaUJtYVd4c1BTSWpNREF3SWlCb2NtVm1QU0lqTURBd0lpQjJhV1YzUFNJaU1EQXdJaUJ5UFNJeE1EQXdJREV3TURBaUlHNWhiV1U5SWlJd01EQXdJaUJ6ZEhKdmEyVXRkMmxrZEdnOUlqQXVNQ0l2UGp4d1lYUm9JR1pwYkd3OUlpTXhNREF3SWlCb2NtVm1QU0lqTURBd0lpQnpkSEp2YTJVdGQybGtkR2c5SWpBdU1DSXZQand2YzNablBnPT0iLAogICAgICAic2l6ZXMiOiAiNzJ4NzIiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9CiAgXQp9">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Brand Colors - Light Theme */
+            --primary-dark: #1a365d;
+            --primary-medium: #2d50a1;
+            --accent-green: #2d7d32;
+            --accent-light: #4caf50;
+            --white: #ffffff;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e2e8f0;
+            --dark-gray: #4a5568;
+            
+            /* Typography */
+            --font-arabic: 'Tajawal', sans-serif;
+            --font-english: 'Inter', sans-serif;
+            
+            /* Spacing */
+            --section-padding: 5rem 0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        /* Dark Theme - محسّن للألوان الداكنة */
+        [data-theme="dark"] {
+            --primary-dark: #0f172a;
+            --primary-medium: #1e40af;
+            --accent-green: #22c55e;
+            --accent-light: #4ade80;
+            --white: #0f172a;
+            --light-gray: #1e293b;
+            --medium-gray: #334155;
+            --dark-gray: #e2e8f0;
+            
+            /* ألوان النص في الوضع الداكن - مظلمة وواضحة */
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-arabic);
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            direction: rtl;
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] body {
+            color: var(--text-primary);
+            background-color: var(--primary-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .header {
+            background-color: var(--light-gray);
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            color: var(--primary-dark);
+        }
+
+        [data-theme="dark"] .logo-text {
+            color: var(--text-primary);
+        }
+
+        .logo-accent {
+            color: var(--accent-green);
+        }
+
+        .logo-icon {
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        [data-theme="dark"] .nav-link {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover {
+            color: var(--accent-green);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-green);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            color: var(--primary-dark);
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--light-gray);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        [data-theme="dark"] .btn-outline {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        [data-theme="dark"] .btn-outline:hover {
+            background-color: var(--text-primary);
+            color: var(--primary-dark);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-dark);
+            margin: 2px 0;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .mobile-menu-btn span {
+            background-color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-accent {
+            color: var(--accent-light);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Sections Common Styles */
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        [data-theme="dark"] .section-title h2 {
+            color: var(--text-primary);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-green);
+        }
+
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        [data-theme="dark"] .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        [data-theme="dark"] .about-text h3 {
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        [data-theme="dark"] .about-text p {
+            color: var(--text-secondary);
+        }
+
+        .values-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            background-color: var(--light-gray);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-green);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        [data-theme="dark"] .value-icon {
+            background-color: var(--medium-gray);
+        }
+
+        .value-text h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        [data-theme="dark"] .value-text h4 {
+            color: var(--text-primary);
+        }
+
+        .value-text p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        [data-theme="dark"] .value-text p {
+            color: var(--text-secondary);
+        }
+
+        .about-visual {
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-medium);
+        }
+
+        [data-theme="dark"] .about-visual {
+            background-color: var(--medium-gray);
+            color: var(--text-secondary);
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: var(--light-gray);
+        }
+
+        [data-theme="dark"] .projects {
+            background-color: var(--primary-dark);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--medium-gray);
+        }
+
+        [data-theme="dark"] .project-card {
+            background-color: var(--light-gray);
+            border-color: var(--medium-gray);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        [data-theme="dark"] .project-title {
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        [data-theme="dark"] .project-description {
+            color: var(--text-secondary);
+        }
+
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background-color: var(--accent-green);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .project-link:hover {
+            color: var(--accent-light);
+            transform: translateX(-5px);
+        }
+
+        /* Value Proposition */
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent-green);
+        }
+
+        [data-theme="dark"] .value-card {
+            background-color: var(--light-gray);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .value-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        [data-theme="dark"] .value-card h3 {
+            color: var(--text-primary);
+        }
+
+        .value-card p {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        [data-theme="dark"] .value-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+        }
+
+        [data-theme="dark"] .contact {
+            background-color: var(--primary-dark);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        [data-theme="dark"] .contact-form {
+            background-color: var(--light-gray);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .form-group label {
+            color: var(--text-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: 6px;
+            font-family: inherit;
+            transition: var(--transition);
+            background-color: var(--white);
+            color: var(--dark-gray);
+        }
+
+        [data-theme="dark"] .form-control {
+            background-color: var(--medium-gray);
+            border-color: var(--medium-gray);
+            color: var(--text-primary);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 2px rgba(45, 125, 50, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        [data-theme="dark"] .contact-info h3 {
+            color: var(--text-primary);
+        }
+
+        .contact-info p {
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+        }
+
+        [data-theme="dark"] .contact-info p {
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 4rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-green);
+        }
+
+        .footer-col p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+            padding-right: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 1rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 0;
+            max-width: 400px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+
+        [data-theme="dark"] .modal-content {
+            background: var(--light-gray);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .modal-header h3 {
+            color: var(--primary-dark);
+            margin: 0;
+        }
+
+        [data-theme="dark"] .modal-header h3 {
+            color: var(--text-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        [data-theme="dark"] .modal-close {
+            color: var(--text-secondary);
+        }
+
+        .auth-form {
+            padding: 1.5rem;
+        }
+
+        .auth-switch {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--dark-gray);
+        }
+
+        [data-theme="dark"] .auth-switch {
+            color: var(--text-secondary);
+        }
+
+        .link-button {
+            background: none;
+            border: none;
+            color: var(--accent-green);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .link-button:hover {
+            color: var(--accent-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+
+            [data-theme="dark"] .nav-menu {
+                background-color: var(--light-gray);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .auth-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .values-list {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Performance Optimizations */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lazy.loaded {
+            opacity: 1;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for keyboard navigation */
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-text">E-<span class="logo-accent">Smart</span> Market Pro</span>
+                    <div class="logo-icon">🌱</div>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link">عن E-Smart</a></li>
+                    <li><a href="#projects" class="nav-link">المشاريع</a></li>
+                    <li><a href="#values" class="nav-link">القيمة المضافة</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="تبديل الوضع المظلم">
+                        🌙
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="btn btn-outline login-btn">تسجيل الدخول</button>
+                        <button class="btn btn-primary signup-btn">إنشاء حساب</button>
+                    </div>
+                    <button class="mobile-menu-btn" aria-label="قائمة الجوال">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    E-<span class="hero-accent">Smart</span> Market Pro
+                </h1>
+                <p class="hero-subtitle">
+                    عزز أداء شركتك في العالم الرقمي وابدأ مسيرتك نحو التميز الرقمي
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary hero-btn">اكتشف المشاريع</a>
+                    <a href="#about" class="btn btn-outline hero-btn">استكشف المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>عن E-Smart Market Pro</h2>
+                <p>فلسفتنا تقوم على البساطة، الاستدامة، والتمكين المحلي من خلال حلول رقمية مبتكرة</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>منصة الحلول الذكية</h3>
+                    <p>نحن نؤمن بأن التكنولوجيا يجب أن تكون في خدمة المجتمع، وليس العكس. من خلال E-Smart Market Pro، نقدم حلولاً رقمية مصممة خصيصاً لتلبية احتياجات الأفراد والتعاونيات المحلية.</p>
+                    <p>نهجنا يقوم على تبسيط العمليات المعقدة، وتعزيز الكفاءة، وتمكين المجتمعات من تحقيق أقصى استفادة من الموارد المتاحة.</p>
+                    
+                    <div class="values-list">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>حلول ذكية</h4>
+                                <p>تصميم مبتكر يركز على تجربة المستخدم</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>استدامة</h4>
+                                <p>حلول صديقة للبيئة وطويلة الأمد</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>تمكين محلي</h4>
+                                <p>دعم المجتمعات والاقتصاد المحلي</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>بساطة</h4>
+                                <p>واجهات سهلة الاستخدام وسير عمل مبسط</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <i class="fas fa-laptop-code" style="font-size: 5rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>مشاريعنا</h2>
+                <p>استكشف أبرز المشاريع التي نعمل على تطويرها لتمكين الأفراد والتعاونيات</p>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- سيتم إضافة المشاريع ديناميكياً باستخدام JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="values" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>القيمة المضافة</h2>
+                <p>نقدم قيمة حقيقية من خلال حلولنا المبتكرة والمصممة خصيصاً لاحتياجاتك</p>
+            </div>
+            
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>تمكين محلي</h3>
+                    <p>ندعم الاقتصاد المحلي من خلال توفير أدوات رقمية تمكن الأفراد والتعاونيات من النمو والمنافسة.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>حلول ذكية</h3>
+                    <p>نصمم حلولاً ذكية تعتمد على أحدث التقنيات لتبسيط العمليات وتحسين الكفاءة.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>تصميم مستدام</h3>
+                    <p>نراعي الاستدامة في جميع حلولنا، من حيث الكفاءة في استخدام الموارد والتأثير البيئي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تواصل معنا</h2>
+                <p>نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك الرقمية</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال الرسالة</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>ابقَ على تواصل</h3>
+                    <p>نحن نرحب بأسئلتك، ملاحظاتك، وأي استفسارات حول مشاريعنا أو خدماتنا. فريقنا متاح للرد على استفساراتك خلال 24 ساعة.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/najemi19" class="social-link" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>E-Smart Market Pro</h3>
+                    <p>منصة رقمية موحدة لتمكين الأفراد والتعاونيات عبر حلول ذكية، بسيطة، ومستدامة.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن E-Smart</a></li>
+                        <li><a href="#projects">المشاريع</a></li>
+                        <li><a href="#values">القيمة المضافة</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>المشاريع</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/najemi19/Smart-Tailor-MVP" target="_blank">Smart Tailor MVP</a></li>
+                        <li><a href="https://github.com/najemi19/E-Smart-My-Home-Dash" target="_blank">E-Smart My Home Dash</a></li>
+                        <li><a href="https://github.com/najemi19/E-Smart-Quran-Guide" target="_blank">E-Smart Quran Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>القوانين والسياسات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الاستخدام</a></li>
+                        <li><a href="#">السياسة والقوانين</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 E-Smart Market Pro</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>تسجيل الدخول</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">البريد الإلكتروني</label>
+                    <input type="email" id="login-email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">كلمة المرور</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">تسجيل الدخول</button>
+                
+                <p class="auth-switch">
+                    ليس لديك حساب؟ 
+                    <button type="button" class="link-button switch-to-signup">إنشاء حساب</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إنشاء حساب جديد</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="auth-form" id="signupForm">
+                <div class="form-group">
+                    <label for="signup-name">الاسم الكامل</label>
+                    <input type="text" id="signup-name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">البريد الإلكتروني</label>
+                    <input type="email" id="signup-email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">كلمة المرور</label>
+                    <input type="password" id="signup-password" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-confirm">تأكيد كلمة المرور</label>
+                    <input type="password" id="signup-confirm" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">إنشاء الحساب</button>
+                
+                <p class="auth-switch">
+                    لديك حساب بالفعل؟ 
+                    <button type="button" class="link-button switch-to-login">تسجيل الدخول</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="emailConfirmModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>تأكيد البريد الإلكتروني</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div style="padding: 1.5rem; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                <p style="margin-bottom: 1.5rem; color: var(--dark-gray);">
+                    لقد أرسلنا رسالة تأكيد إلى بريدك الإلكتروني. يرجى التحقق من بريدك والنقر على رابط التأكيد لتفعيل حسابك.
+                </p>
+                <button class="btn btn-primary" id="confirmClose">
+                    فهمت!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // بيانات المشاريع من GitHub
+        const projectsData = [
+            {
+                title: "Smart Tailor MVP",
+                description: "منصة ذكية متكاملة لإدارة محلات الخياطة مع نظام تتبع الطلبات وإدارة المخزون",
+                icon: "👔",
+                githubUrl: "https://github.com/najemi19/Smart-Tailor-MVP",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "E-Smart My Home Dash",
+                description: "لوحة تحكم ذكية لإدارة المنازل الذكية ومراقبة استهلاك الطاقة",
+                icon: "🏠",
+                githubUrl: "https://github.com/najemi19/E-Smart-My-Home-Dash",
+                technologies: ["React", "IoT", "Firebase"]
+            },
+            {
+                title: "E-Smart Quran Guide",
+                description: "تطبيق تفاعلي لتعلم القرآن الكريم مع تفسيرات وتلاوات",
+                icon: "📖",
+                githubUrl: "https://github.com/najemi19/E-Smart-Quran-Guide",
+                technologies: ["React Native", "Audio API", "Cloud Storage"]
+            },
+            {
+                title: "Store Parfum Dashboard",
+                description: "نظام متكامل لإدارة متاجر العطور يتضمن إدارة المخزون والمبيعات",
+                icon: "💎",
+                githubUrl: "https://github.com/najemi19/store-parfum-dashboard",
+                technologies: ["Vue.js", "Express", "MySQL"]
+            },
+            {
+                title: "Cooperative Manager",
+                description: "منصة شاملة لإدارة التعاونيات مع إدارة الأعضاء والمشاريع",
+                icon: "👥",
+                githubUrl: "https://github.com/najemi19/Coopirative-manager",
+                technologies: ["React", "Django", "PostgreSQL"]
+            },
+            {
+                title: "E-Smart Cam Live Monitor",
+                description: "نظام مراقبة حية للكاميرات مع تحليل فيديو ذكي",
+                icon: "📹",
+                githubUrl: "https://github.com/najemi19/E-Smart-Cam-Live-Monitor",
+                technologies: ["Python", "OpenCV", "WebRTC"]
+            },
+            {
+                title: "Smart Tailor New MVP",
+                description: "نسخة مطورة من نظام إدارة محلات الخياطة بميزات إضافية",
+                icon: "✂️",
+                githubUrl: "https://github.com/najemi19/Smart-Tailor-new-MVP-",
+                technologies: ["React", "Node.js", "MongoDB", "AI"]
+            },
+            {
+                title: "Cofe Restaurant Dashboard",
+                description: "لوحة تحكم متكاملة لإدارة المطاعم والمقاهي",
+                icon: "☕",
+                githubUrl: "https://github.com/najemi19/cofe-restaurant-dashboard",
+                technologies: ["React", "Firebase", "Stripe"]
+            },
+            {
+                title: "Landing Page Cofe Dash",
+                description: "صفحة هبوط احترافية لتطبيقات المطاعم والمقاهي",
+                icon: "🌐",
+                githubUrl: "https://github.com/najemi19/landing-page-cofe-dash-pub",
+                technologies: ["HTML", "CSS", "JavaScript"]
+            },
+            {
+                title: "Traducteur Assermenté",
+                description: "منصة للترجمة المعتمدة مع إدارة المستندات",
+                icon: "🌍",
+                githubUrl: "https://github.com/najemi19/Traducteur-Asserment-",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "Sondal Grosist",
+                description: "نظام إدارة للموزعين وتجار الجملة",
+                icon: "📦",
+                githubUrl: "https://github.com/najemi19/sondal-grosist",
+                technologies: ["Vue.js", "Laravel", "MySQL"]
+            },
+            {
+                title: "Fibreinvioussama",
+                description: "منصة للتعلم الإلكتروني والمحتوى التعليمي",
+                icon: "🎓",
+                githubUrl: "https://github.com/najemi19/fibreinvioussama",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "My Carte Visite",
+                description: "تطبيق لإنشاء وإدارة بطاقات العمل الرقمية",
+                icon: "📇",
+                githubUrl: "https://github.com/najemi19/my-carte-visite",
+                technologies: ["React Native", "Firebase"]
+            },
+            {
+                title: "Smart Quran Guide",
+                description: "نسخة مطورة من دليل القرآن الذكي",
+                icon: "🕌",
+                githubUrl: "https://github.com/najemi19/smart-quran-guide",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "App Mobile Dashboard",
+                description: "لوحة تحكم للتطبيقات المتنقلة مع إحصائيات متقدمة",
+                icon: "📱",
+                githubUrl: "https://github.com/najemi19/app-mobile-dashboard",
+                technologies: ["React Native", "Firebase", "Chart.js"]
+            },
+            {
+                title: "DXN Dashboard",
+                description: "نظام إدارة لشركات التسويق الشبكي",
+                icon: "📊",
+                githubUrl: "https://github.com/najemi19/DXN-",
+                technologies: ["Vue.js", "Laravel", "MySQL"]
+            },
+            {
+                title: "Parfum Dash Public",
+                description: "نسخة عامة من نظام إدارة متاجر العطور",
+                icon: "🧴",
+                githubUrl: "https://github.com/najemi19/parfun-dash-pub",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "Nourea Bloom",
+                description: "منصة للتجارة الإلكترونية للمنتجات الطبيعية",
+                icon: "🌺",
+                githubUrl: "https://github.com/najemi19/nourea-bloom",
+                technologies: ["React", "Node.js", "MongoDB"]
+            },
+            {
+                title: "Fati DNX Dash",
+                description: "لوحة تحكم مخصصة لنظام DXN",
+                icon: "💼",
+                githubUrl: "https://github.com/najemi19/fati-dnx-dash",
+                technologies: ["Vue.js", "Laravel", "MySQL"]
+            },
+            {
+                title: "Quran Matrix LD",
+                description: "منصة متقدمة لدراسة القرآن مع خرائط المفاهيم",
+                icon: "🧩",
+                githubUrl: "https://github.com/najemi19/quraan-matrix-LD-pub",
+                technologies: ["React", "D3.js", "Node.js"]
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // تهيئة التطبيق
+            initApp();
+            
+            function initApp() {
+                initNavigation();
+                initTheme();
+                initAuthModals();
+                initContactForm();
+                renderProjects();
+                initPerformance();
+            }
+
+            // نظام التنقل
+            function initNavigation() {
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const navMenu = document.querySelector('.nav-menu');
+                
+                mobileMenuBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.setAttribute('aria-expanded', 
+                        this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+                    );
+                });
+                
+                // إغلاق القائمة عند النقر على رابط
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // إخفاء القائمة عند التمرير
+                let lastScrollY = window.scrollY;
+                const header = document.querySelector('.header');
+                
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        header.style.transform = 'translateY(0)';
+                    }
+                    lastScrollY = window.scrollY;
+                });
+            }
+
+            // نظام الثيم (نهاري/ليلي) - محسّن
+            function initTheme() {
+                const themeToggle = document.querySelector('.theme-toggle');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const savedTheme = localStorage.getItem('esmart-theme');
+                
+                // تطبيق الثيم المحفوظ أو تفضيلات النظام
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.textContent = '☀️';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    themeToggle.textContent = '🌙';
+                }
+                
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+                    localStorage.setItem('esmart-theme', newTheme);
+                });
+            }
+
+            // نظام المصادقة والنوافذ المنبثقة
+            function initAuthModals() {
+                const loginBtn = document.querySelector('.login-btn');
+                const signupBtn = document.querySelector('.signup-btn');
+                const loginModal = document.getElementById('loginModal');
+                const signupModal = document.getElementById('signupModal');
+                const emailConfirmModal = document.getElementById('emailConfirmModal');
+                const closeButtons = document.querySelectorAll('.modal-close');
+                const switchToSignup = document.querySelector('.switch-to-signup');
+                const switchToLogin = document.querySelector('.switch-to-login');
+                const confirmClose = document.getElementById('confirmClose');
+                
+                // فتح وإغلاق المودالات
+                loginBtn.addEventListener('click', () => showModal(loginModal));
+                signupBtn.addEventListener('click', () => showModal(signupModal));
+                
+                closeButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        hideAllModals();
+                    });
+                });
+                
+                switchToSignup.addEventListener('click', function() {
+                    hideAllModals();
+                    showModal(signupModal);
+                });
+                
+                switchToLogin.addEventListener('click', function() {
+                    hideAllModals();
+                    showModal(loginModal);
+                });
+                
+                confirmClose.addEventListener('click', () => hideAllModals());
+                
+                // إغلاق المودال عند النقر خارج المحتوى
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            hideAllModals();
+                        }
+                    });
+                });
+                
+                // معالجة نموذج تسجيل الدخول
+                document.getElementById('loginForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('login-email').value;
+                    const password = document.getElementById('login-password').value;
+                    
+                    // محاكاة تسجيل الدخول
+                    console.log('تسجيل الدخول:', { email, password });
+                    hideAllModals();
+                    showToast('تم تسجيل الدخول بنجاح!');
+                });
+                
+                // معالجة نموذج إنشاء الحساب
+                document.getElementById('signupForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('signup-name').value;
+                    const email = document.getElementById('signup-email').value;
+                    const password = document.getElementById('signup-password').value;
+                    const confirmPassword = document.getElementById('signup-confirm').value;
+                    
+                    if (password !== confirmPassword) {
+                        showToast('كلمات المرور غير متطابقة!');
+                        return;
+                    }
+                    
+                    // محاكاة إنشاء الحساب
+                    console.log('إنشاء حساب:', { name, email, password });
+                    hideAllModals();
+                    showModal(emailConfirmModal);
+                    showToast('تم إنشاء الحساب بنجاح! يرجى تأكيد بريدك الإلكتروني.');
+                });
+            }
+
+            function showModal(modal) {
+                hideAllModals();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function hideAllModals() {
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+
+            // عرض المشاريع
+            function renderProjects() {
+                const projectsGrid = document.getElementById('projectsGrid');
+                
+                projectsData.forEach(project => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'project-card';
+                    
+                    projectCard.innerHTML = `
+                        <div class="project-icon">${project.icon}</div>
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-description">${project.description}</p>
+                        
+                        <div class="project-technologies">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        
+                        <a href="${project.githubUrl}" target="_blank" class="project-link">
+                            عرض على GitHub
+                        </a>
+                    `;
+                    
+                    projectsGrid.appendChild(projectCard);
+                });
+            }
+
+            // نموذج الاتصال
+            function initContactForm() {
+                const contactForm = document.getElementById('contactForm');
+                
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // محاكاة إرسال النموذج
+                    const formData = new FormData(this);
+                    const formValues = Object.fromEntries(formData);
+                    
+                    console.log('تم إرسال النموذج:', formValues);
+                    
+                    // إظهار رسالة نجاح
+                    showToast('شكراً لتواصلك معنا! سنرد على رسالتك في أقرب وقت ممكن.');
+                    this.reset();
+                });
+            }
+
+            // تحسينات الأداء
+            function initPerformance() {
+                // منع إعادة التدفق غير الضرورية
+                let resizeTimeout;
+                window.addEventListener('resize', function() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(function() {
+                        // إعادة حساب العناصر الحساسة للعرض
+                    }, 250);
+                });
+            }
+
+            // وظيفة مساعدة لعرض الإشعارات
+            function showToast(message) {
+                // إنشاء عنصر Toast
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--accent-green);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 6px;
+                    z-index: 10000;
+                    box-shadow: var(--shadow-lg);
+                    transition: var(--transition);
+                `;
+                
+                document.body.appendChild(toast);
+                
+                // إزالة Toast بعد 3 ثواني
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300);
+                }, 3000);
+            }
+        });
+
+        // تحميل Service Worker للتطبيق التقدمي (PWA)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
